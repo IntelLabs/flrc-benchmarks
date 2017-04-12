@@ -4,7 +4,7 @@ This repository contains several benchmarks used in the [Measuring the Haskell G
 
 For more details on the benchmarks themselves please refer to the paper.
 
-To compile with HRC, please see the section in [Building and Using GHC with HRC]() for more information.
+To compile with HRC, please see the section in [Building and Using GHC with HRC](https://github.com/IntelLabs/flrc/doc/building-ghc.md) for more information.
 
 ## Related Publication
 
