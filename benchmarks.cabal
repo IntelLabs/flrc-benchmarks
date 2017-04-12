@@ -5,7 +5,7 @@ name:                hrc-benchmarks
 version:             0.1.0.0
 synopsis:            Benchmarks for Intel Labs Haskell Research Compiler
 homepage:            https://github.com/IntelLabs/flrc
-license:             Other
+license:             OtherLicense
 license-file:        LICENSE
 author:              Paul H. Liu
 maintainer:          hai.liu@intel.com
@@ -16,7 +16,7 @@ cabal-version:       >=1.10
 
 library 
   hs-source-dirs:      src
-  build-depends:       base >=4.6 && <4.7, time >=1.4 && <1.5
+  build-depends:       base, time
   exposed-modules:     Harness
   default-language:    Haskell2010
 
@@ -24,18 +24,21 @@ executable 1d-convolution
   main-is:             1d-convolution.hs
   build-depends:       base, repa, hrc-benchmarks
   hs-source-dirs:      1d-convolution
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded
   default-language:    Haskell2010
 
 executable 2d-convolution
   main-is:             2d-convolution.hs
   build-depends:       base, repa, hrc-benchmarks
   hs-source-dirs:      2d-convolution
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded
   default-language:    Haskell2010
 
 executable 7pt-stencil
   main-is:             7pt-stencil.hs
   build-depends:       base, repa, hrc-benchmarks
   hs-source-dirs:      7pt-stencil
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded
   default-language:    Haskell2010
 
 executable backprojection
@@ -54,23 +57,27 @@ executable libor
   main-is:             libor.hs
   build-depends:       base, repa, primitive, vector, hrc-benchmarks
   hs-source-dirs:      libor
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded
   default-language:    Haskell2010
 
 executable nbody
   main-is:             nbody.hs
   build-depends:       base, repa, deepseq, hrc-benchmarks
   hs-source-dirs:      nbody
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded
   default-language:    Haskell2010
 
 executable treesearch
   main-is:             treesearch.hs
   build-depends:       base, repa, mersenne-random, vector, hrc-benchmarks
   hs-source-dirs:      treesearch
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded -DREPA
   default-language:    Haskell2010
 
 executable vr
   main-is:             vr.hs
   build-depends:       base, repa, vector, hrc-benchmarks
   hs-source-dirs:      vr
+  ghc-options:         -fno-liberate-case -funfolding-use-threshold1000  -funfolding-keeness-factor1000 -threaded
   default-language:    Haskell2010
 
