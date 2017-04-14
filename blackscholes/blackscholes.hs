@@ -18,6 +18,7 @@
 -- Ported from CnC/C++ program by Ryan Newton
 -- Modified for use with Repa and HRC by Todd Anderson (2012)
 -}
+{-# LANGUAGE FlexibleContexts #-}
 
 import Harness
 import Control.Monad

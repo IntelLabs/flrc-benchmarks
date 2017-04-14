@@ -14,7 +14,7 @@
  - IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -}
 
-{-# LANGUAGE NoMonomorphismRestriction, BangPatterns, CPP #-}
+{-# LANGUAGE NoMonomorphismRestriction, BangPatterns, CPP, FlexibleContexts #-}
 {-# OPTIONS -msse2 #-}
 
 -- A Binary Tree Search Program

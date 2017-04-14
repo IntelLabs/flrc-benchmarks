@@ -19,7 +19,7 @@
 -- Modified for use with Repa and HRC by Leaf Petersen (2012)
 -}
 
-{-# LANGUAGE BangPatterns #-}
+{-# LANGUAGE BangPatterns, FlexibleContexts #-}
 
 import Harness  
 import Control.Monad
