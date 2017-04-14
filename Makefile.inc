@@ -3,6 +3,7 @@ EXE = .exe
 
 ifeq (y, $(VEC))
   VEC_OPT = -control MilCompile '[{SH} XTREV CIV FREV XDCUYLV REV XTIJKTVX B FREV YBLVZBLV zsFBIft]S' -Varch ViAVX -F MilVectorize:float-reductions
+  EXE = .vec.exe
 else
   VEC_OPT =
 endif
