@@ -45,12 +45,14 @@ executable backprojection
   main-is:             backprojection.hs
   build-depends:       base, repa, deepseq, hrc-benchmarks
   hs-source-dirs:      backprojection
+  ghc-options:         -threaded
   default-language:    Haskell2010
 
 executable blackscholes
   main-is:             blackscholes.hs
   build-depends:       base, repa, deepseq, hrc-benchmarks
   hs-source-dirs:      blackscholes
+  ghc-options:         -threaded
   default-language:    Haskell2010
 
 executable libor
