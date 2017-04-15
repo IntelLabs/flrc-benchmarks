@@ -383,7 +383,7 @@ buildIt args = do
                     16 -> blockQuery searchDepth16 arr queries
                     24 -> blockQuery searchDepth24 arr queries
                     _  -> error $ "The tree depth must be either 6, 10, 16 or 24 for block query"
-      arr `seq` return (query, Just (print . checksum))
+      arr `seq` return (query, Just (writeFile "treesearch.res" . show . checksum))
 main = runBenchmark buildIt
 #endif
 
