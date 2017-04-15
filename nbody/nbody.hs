@@ -83,7 +83,7 @@ buildIt args =  return (runIt, showIt)
     showIt = 
       let f = \r -> 
                   let s = List.concat ([ T.printf "(%.3g, %.3g %.3g)\t" x y z | (x, y, z) <- (R.toList r) ])
-                  in writeFile "nbody-repa.res" s
+                  in writeFile "nbody.res" s
       in Just f
 
 main = runBenchmark buildIt
